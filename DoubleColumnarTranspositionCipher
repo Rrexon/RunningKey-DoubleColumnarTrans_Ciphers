@@ -1,0 +1,35 @@
+import math
+
+def columnar_transposition_encryption_alg(key, plaintext):
+
+    ciphertext = ""
+
+    plaintext = plaintext.lower().replace(" ", "")
+    key = key.lower().replace(" ", "")
+
+    numri_i_rreshtave = math.ceil(len(plaintext) / len(key))
+    numri_i_kolonave = len(key)
+
+    while len(plaintext) < (numri_i_rreshtave * numri_i_kolonave):
+        plaintext += "x"
+
+    matrica = [[0 for _ in range(numri_i_kolonave)] for _ in range(numri_i_rreshtave)]
+
+    index = 0
+    for i in range(numri_i_rreshtave):
+        for j in range(numri_i_kolonave):
+            matrica[i][j] = plaintext[index]
+            index +=1
+
+    ciftet = []
+    for i in range(len(key)):
+        ciftet.append([key[i], i])
+
+    ciftet.sort()
+
+    for cifti in ciftet:
+        for j in range(numri_i_rreshtave):
+            ciphertext += matrica[j][cifti[1]]
+
+    return ciphertext
+
