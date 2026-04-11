@@ -40,3 +40,19 @@ def double_columnar_transposition_encryption_alg(key1, key2, plaintext):
     ciphertext2 = columnar_transposition_encryption_alg(key2, ciphertext)
     return ciphertext2
 
+
+
+
+# The decryption algorithms are not implemented yet, but they will be added in the future.
+if "__main__" == __name__:
+
+    answer = input("Would you like to encrypt ? Press 1 for encryption : ")
+    if answer == "1":
+
+        plaintext = input("Please enter the plaintext: ")
+        key1 = input("Please enter the first key: ")
+        key2 = input("Please enter the second key: ")
+        
+        print(f"Old message: {plaintext}")
+        print(f"The encrypted message is {double_columnar_transposition_encryption_alg(key1, key2, plaintext)}")
+
