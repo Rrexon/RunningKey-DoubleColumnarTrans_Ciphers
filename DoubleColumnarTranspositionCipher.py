@@ -33,3 +33,10 @@ def columnar_transposition_encryption_alg(key, plaintext):
 
     return ciphertext
 
+
+def double_columnar_transposition_encryption_alg(key1, key2, plaintext):
+
+    ciphertext = columnar_transposition_encryption_alg(key1, plaintext)
+    ciphertext2 = columnar_transposition_encryption_alg(key2, ciphertext)
+    return ciphertext2
+
