@@ -82,16 +82,25 @@ def double_columnar_transposition_decryption_alg(key1, key2, ciphertext):
     return plaintext2
 
 
-# The decryption algorithms are not implemented yet, but they will be added in the future.
 if "__main__" == __name__:
 
-    answer = input("Would you like to encrypt ? Press 1 for encryption : ")
+    answer = input("Would you like to encrypt or decrypt your message? Press 1 for encryption or press 2 for decryption: ")
+    
     if answer == "1":
 
         plaintext = input("Please enter the plaintext: ")
         key1 = input("Please enter the first key: ")
         key2 = input("Please enter the second key: ")
-        
+
         print(f"Old message: {plaintext}")
         print(f"The encrypted message is {double_columnar_transposition_encryption_alg(key1, key2, plaintext)}")
 
+
+    elif answer == "2":
+
+        ciphertext = input("Please enter the ciphertext: ")
+        key2 = input("Please enter the second key: ")
+        key1 = input("Please enter the first key: ")
+
+        print(f"Old message: {ciphertext}")
+        print(f"The decrypted message is {double_columnar_transposition_decryption_alg(key1, key2, ciphertext)}")
