@@ -74,6 +74,14 @@ def columnar_transposition_decryption_alg(key, ciphertext):
     return plaintext
 
 
+def double_columnar_transposition_decryption_alg(key1, key2, ciphertext):
+
+    plaintext = columnar_transposition_decryption_alg(key2, ciphertext)
+    plaintext2 = columnar_transposition_decryption_alg(key1, plaintext)
+
+    return plaintext2
+
+
 # The decryption algorithms are not implemented yet, but they will be added in the future.
 if "__main__" == __name__:
 
