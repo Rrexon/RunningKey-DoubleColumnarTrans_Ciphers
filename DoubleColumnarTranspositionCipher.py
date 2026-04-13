@@ -41,18 +41,66 @@ def double_columnar_transposition_encryption_alg(key1, key2, plaintext):
     return ciphertext2
 
 
+def columnar_transposition_decryption_alg(key, ciphertext):
+    plaintext = ""
+
+    key = key.lower().replace(" ", "")
+    ciphertext = ciphertext.lower().replace(" ", "")
+
+    numri_i_rreshtave = len(ciphertext) // len(key)
+    numri_i_kolonave = len(key)
+
+    matrica = [[0 for _ in range(numri_i_kolonave)] for _ in range(numri_i_rreshtave)]
+
+    ciftet = []
+    for i in range(numri_i_kolonave):
+        ciftet.append([key[i], i])
+
+    ciftet.sort()
+
+    index = 0
+
+    for cifti in ciftet:
+        for i in range(numri_i_rreshtave):
+
+            matrica[i][cifti[1]] = ciphertext[index]
+            index +=1
+
+    for i in range(numri_i_rreshtave):
+        for j in range(numri_i_kolonave):
+
+            plaintext += matrica[i][j]
+
+    return plaintext
 
 
-# The decryption algorithms are not implemented yet, but they will be added in the future.
+def double_columnar_transposition_decryption_alg(key1, key2, ciphertext):
+
+    plaintext = columnar_transposition_decryption_alg(key2, ciphertext)
+    plaintext2 = columnar_transposition_decryption_alg(key1, plaintext)
+
+    return plaintext2
+
+
 if "__main__" == __name__:
 
-    answer = input("Would you like to encrypt ? Press 1 for encryption : ")
+    answer = input("Would you like to encrypt or decrypt your message? Press 1 for encryption or press 2 for decryption: ")
+    
     if answer == "1":
 
         plaintext = input("Please enter the plaintext: ")
         key1 = input("Please enter the first key: ")
         key2 = input("Please enter the second key: ")
-        
+
         print(f"Old message: {plaintext}")
         print(f"The encrypted message is {double_columnar_transposition_encryption_alg(key1, key2, plaintext)}")
 
+
+    elif answer == "2":
+
+        ciphertext = input("Please enter the ciphertext: ")
+        key2 = input("Please enter the second key: ")
+        key1 = input("Please enter the first key: ")
+
+        print(f"Old message: {ciphertext}")
+        print(f"The decrypted message is {double_columnar_transposition_decryption_alg(key1, key2, ciphertext)}")
