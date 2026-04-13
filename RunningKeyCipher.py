@@ -14,6 +14,8 @@ def running_key_encryption_alg(key, plaintext):
 
     return ciphertext
 
+
+
 def running_key_decryption_alg(key, ciphertext):
 
     plaintext = ""
