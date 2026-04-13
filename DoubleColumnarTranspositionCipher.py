@@ -41,6 +41,37 @@ def double_columnar_transposition_encryption_alg(key1, key2, plaintext):
     return ciphertext2
 
 
+def columnar_transposition_decryption_alg(key, ciphertext):
+    plaintext = ""
+
+    key = key.lower().replace(" ", "")
+    ciphertext = ciphertext.lower().replace(" ", "")
+
+    numri_i_rreshtave = len(ciphertext) // len(key)
+    numri_i_kolonave = len(key)
+
+    matrica = [[0 for _ in range(numri_i_kolonave)] for _ in range(numri_i_rreshtave)]
+
+    ciftet = []
+    for i in range(numri_i_kolonave):
+        ciftet.append([key[i], i])
+
+    ciftet.sort()
+
+    index = 0
+
+    for cifti in ciftet:
+        for i in range(numri_i_rreshtave):
+
+            matrica[i][cifti[1]] = ciphertext[index]
+            index +=1
+
+    for i in range(numri_i_rreshtave):
+        for j in range(numri_i_kolonave):
+
+            plaintext += matrica[i][j]
+
+    return plaintext
 
 
 # The decryption algorithms are not implemented yet, but they will be added in the future.
