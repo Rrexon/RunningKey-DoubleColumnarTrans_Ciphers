@@ -51,3 +51,13 @@ if __name__ == "__main__":
 
     elif answer == "2":
 
+
+        ciphertext = input("Please enter the ciphertext: ")
+        key = input("Please enter the key: ")
+
+        if len(key.replace(" ", "")) < len(ciphertext.replace(" ", "")):
+            print("The key's length must be at least as long as the ciphertext's length!!!")
+
+        else:
+            print(f"Old encrypted message: {ciphertext}")
+            print(f"New decrypted message: {running_key_decryption_alg(key, ciphertext)}")
