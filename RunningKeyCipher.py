@@ -14,6 +14,8 @@ def running_key_encryption_alg(key, plaintext):
 
     return ciphertext
 
+
+
 def running_key_decryption_alg(key, ciphertext):
 
     plaintext = ""
@@ -30,3 +32,32 @@ def running_key_decryption_alg(key, ciphertext):
         plaintext += chr(p_value + ord('a'))
 
     return plaintext
+
+
+if __name__ == "__main__":
+
+    answer = input("Would you like to encrypt or decrypt your message? Press 1 for encryption or press 2 for decryption: ")
+    if answer == "1":
+
+        plaintext = input("Please enter the plaintext: ")
+        key = input("Please enter the key: ")
+
+        if len(key.replace(" ", "")) < len(plaintext.replace(" ", "")):
+            print("The key's length must be at least as long as the plaintext's length!!!")
+
+        else:
+            print(f" Old message: {plaintext}")
+            print(f"New encrypted message: {running_key_encryption_alg(key, plaintext)}")
+
+    elif answer == "2":
+
+
+        ciphertext = input("Please enter the ciphertext: ")
+        key = input("Please enter the key: ")
+
+        if len(key.replace(" ", "")) < len(ciphertext.replace(" ", "")):
+            print("The key's length must be at least as long as the ciphertext's length!!!")
+
+        else:
+            print(f"Old encrypted message: {ciphertext}")
+            print(f"New decrypted message: {running_key_decryption_alg(key, ciphertext)}")
