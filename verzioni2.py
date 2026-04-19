@@ -77,3 +77,41 @@ def running_key_encryption_alg(key, plaintext):
 
     return ciphertext
 
+
+# DECRYPTION FUNKSIONI
+
+def running_key_decryption_alg(key, ciphertext):
+
+    plaintext = ""
+
+    # standardizim i ciphertext
+    ciphertext = ciphertext.lower()
+
+    # përdorim vetëm shkronja për key length
+    ciphertext_letters_only = ciphertext.replace(" ", "").lower()
+
+    # zgjasim key-in për decryption
+    key_extended = extend_key(key, len(ciphertext_letters_only))
+
+    j = 0
+
+    for ch in ciphertext:
+
+        # ruajmë hapësirat
+        if ch == " ":
+            plaintext += " "
+            continue
+
+        # konvertim i shkronjës në numër
+        c_value = ord(ch) - ord('a')
+        k_value = ord(key_extended[j]) - ord('a')
+
+        # formula e decryption
+        p_value = (c_value - k_value) % 26
+
+        plaintext += chr(p_value + ord('a'))
+
+        j += 1
+
+    return plaintext
+
