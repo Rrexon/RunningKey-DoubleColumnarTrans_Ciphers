@@ -14,6 +14,7 @@ Ky projekt implementon një version më të thjeshtë të **Running Key Cipher**
 ```bash
 python RunningKeyCipher.py
 ```
+Pas ekzekutimit, programi pyet nëse dëshironi të enkriptoni (1) apo dekriptoni (2) mesazhin, pastaj kërkon inputet e nevojshme.
 ---
 
 # ⚙️ Si funksionon algoritmi
@@ -105,6 +106,7 @@ Ky projekt implementon një **Running Key Cipher**, një metodë klasike e kript
 ```bash
 python verzioni2.py
 ```
+Pas ekzekutimit, programi pyet nëse dëshironi të enkriptoni (1) apo dekriptoni (2) mesazhin, pastaj kërkon inputet e nevojshme.
 
 ---
 
