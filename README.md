@@ -45,25 +45,18 @@ C = (P + K) mod 26
 
 ## 🔹 Shembulli 2
 
-**Input:**
-Plaintext: cryptography
-Key: keykeykeykeyk
+<img width="743" height="89" alt="image" src="https://github.com/user-attachments/assets/86400926-604b-41e7-9ece-bc3fc8c882bc" />
 
-**Output:**
-Encrypted: mrxvzcxktqht
-Decrypted: cryptography
 
 ---
 
 ## 🔹 Shembulli 3
+<img width="751" height="91" alt="image" src="https://github.com/user-attachments/assets/c7da81ce-c8a5-4577-943c-d77206253c87" />
 
-**Input:**
-Plaintext: attackatdawn
-Key: lemonlemonle
+## Shembulli 4
+<img width="689" height="76" alt="image" src="https://github.com/user-attachments/assets/4ce57aa0-0101-4d34-a2d1-a73665e368dd" />
 
-**Output:**
-Encrypted: lxfopvefrnhr
-Decrypted: attackatdawn
+
 # 🚀 Si përdoret
 
 1. Run programin në Python
@@ -154,38 +147,22 @@ P = (C - K) mod 26
 
 ## 🔹 Shembulli 1
 
-**Input:**
-Plaintext: hello world
-Key: secret
+<img width="193" height="154" alt="image" src="https://github.com/user-attachments/assets/e54f9fc0-766f-42b7-b666-635e56a66043" />
 
-**Output:**
-Encrypted: zevvj giqlk
-Decrypted: hello world
 
 
 ---
 
 ## 🔹 Shembulli 2
 
-**Input:**
-Plaintext: cryptography
-Key: key
-
-**Output:**
-Encrypted: mrxvzcxktqht
-Decrypted: cryptography
+<img width="550" height="158" alt="image" src="https://github.com/user-attachments/assets/2e2d7c7e-e49d-48f2-8cb6-13294cd5ef34" />
 
 ---
 
 ## 🔹 Shembulli 3
 
-**Input:**
-Plaintext: attack at dawn
-Key: lemon
+<img width="242" height="148" alt="image" src="https://github.com/user-attachments/assets/1d4899c9-b9a1-441c-ab2c-54d8044a3725" />
 
-**Output:**
-Encrypted: lxfopv ef rnhr
-Decrypted: attack at dawn
 
 
 
