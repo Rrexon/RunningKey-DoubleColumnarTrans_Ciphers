@@ -37,13 +37,9 @@ C = (P + K) mod 26
 
 ## 🔹 Shembulli 1
 
-**Input:**
-Plaintext: hello world
-Key: secretkeyyy
+<img width="748" height="106" alt="image" src="https://github.com/user-attachments/assets/0fce46a8-4d8e-4d80-970a-e6736893363d" />
 
-**Output:**
-Encrypted: zfyyfvlxqk
-Decrypted: helloworld
+
 
 ---
 
