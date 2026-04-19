@@ -130,3 +130,49 @@ if __name__ == "__main__":
     )
 
 
+    # ENCRYPTION MODE
+
+    if answer == "1":
+
+        plaintext = input("Jepni plaintext: ")
+        key = input("Jepni key: ")
+
+        # kontroll për input bosh
+        if not plaintext or not key:
+            print("Error: Nuk mund te jete bosh")
+
+        # validim i tekstit dhe key
+        elif not validate_text(plaintext) or not validate_key(key):
+            print("Error: Vetem shkronja dhe hapesira lejohen")
+
+        else:
+            result = running_key_encryption_alg(key, plaintext)
+
+            print(f"\nOriginal:  {plaintext}")
+            print(f"Encrypted: {result}")
+
+
+    # DECRYPTION MODE
+
+    elif answer == "2":
+
+        ciphertext = input("Jepni ciphertext: ")
+        key = input("Jepni key: ")
+
+        # kontroll për input bosh
+        if not ciphertext or not key:
+            print("Error: Nuk mund te jete bosh.")
+
+        # validim i input-it
+        elif not validate_text(ciphertext) or not validate_key(key):
+            print("Error: Vetem shkronja dhe hapesira lejohen.")
+
+        else:
+            result = running_key_decryption_alg(key, ciphertext)
+
+            print(f"\nEncrypted: {ciphertext}")
+            print(f"Decrypted: {result}")
+
+    else:
+        print("Pranohen vetem 1 dhe 2 si opsion.")
+
