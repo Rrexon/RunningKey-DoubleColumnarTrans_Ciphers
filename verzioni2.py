@@ -115,3 +115,18 @@ def running_key_decryption_alg(key, ciphertext):
 
     return plaintext
 
+
+# =========================
+# MAIN PROGRAM
+# =========================
+if __name__ == "__main__":
+
+    # zgjedhja e përdoruesit
+    answer = input(
+        "A deshironi :\n"
+        "1 - Encrypt\n"
+        "2 - Decrypt\n"
+        "Ju deshironi : "
+    )
+
+
