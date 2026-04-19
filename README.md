@@ -191,3 +191,58 @@ Key: lemon
 Encrypted: lxfopv ef rnhr
 Decrypted: attack at dawn
 
+
+
+# Kriptografi - Double Columnar Transposition Cipher
+
+
+## Si të ekzekutohet
+
+### Kërkesat
+- Python 3.x
+
+### Ekzekutimi
+
+```bash
+python DoubleColumnarTranspositionCipher.py
+```
+
+Pas ekzekutimit, programi pyet nëse dëshironi të **enkriptoni (1)** apo **dekriptoni (2)** mesazhin, pastaj kërkon inputet e nevojshme.
+
+---
+
+## Përshkrimi i algoritmit
+
+Columnar Transposition është një algoritëm që rirendit shkronjat e mesazhit bazuar në një çelës. Teksti vendoset në një matricë rresht pas rreshti, pastaj kolonat lexohen sipas rendit alfabetik të çelësit. **Double** Columnar Transposition e aplikon këtë proces dy herë me dy çelësa të ndryshëm, duke rritur ndjeshëm sigurinë.
+
+> **Shënim:** Nëse teksti nuk e plotëson matricën, plotësohet me shkronjën `x`.
+
+---
+
+## Shembuj
+
+### Double Columnar Transposition Cipher
+
+**Enkriptim:**
+```
+Would you like to encrypt or decrypt? Press 1 for encryption or press 2 for decryption: 1
+Please enter the plaintext: hello world
+Please enter the first key: key
+Please enter the second key: code
+
+Old message: hello world
+The encrypted message is: ehlrolxdxolw
+```
+
+**Dekriptim:**
+```
+Would you like to encrypt or decrypt? Press 1 for encryption or press 2 for decryption: 2
+Please enter the ciphertext: ehlrolxdxolw
+Please enter the second key: code
+Please enter the first key: key
+
+Old message: ehlrolxdxolw
+The decrypted message is: helloworld
+```
+
+
