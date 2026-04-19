@@ -20,7 +20,10 @@ Hapësirat hiqen para procesit.
 
 ## 🔐 Encryption Formula
 C = (P + K) mod 26
-
+Ku:
+- P = shkronja e plaintext-it
+- K = shkronja e key-t
+- C = ciphertext
 ---
 
 # 🧠 Karakteristikat
