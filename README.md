@@ -5,7 +5,15 @@
 # 🔐 Running Key Cipher (Versioni i thjeshtuar - 1) - RunningKeyCipher.py
 
 Ky projekt implementon një version më të thjeshtë të **Running Key Cipher**, ku key duhet të jetë të paktën po aq i gjatë sa mesazhi dhe nuk përdoret zgjatje automatike.
+## Si të ekzekutohet
 
+### Kërkesat
+- Python 3.x
+### Ekzekutimi
+
+```bash
+python RunningKeyCipher.py
+```
 ---
 
 # ⚙️ Si funksionon algoritmi
@@ -88,6 +96,15 @@ Ku:
 Ky projekt implementon një **Running Key Cipher**, një metodë klasike e kriptografisë ku mesazhi enkriptohet duke përdorur një key që zgjatet automatikisht për të përputhur gjatësinë e tekstit.
 
 ---
+## Si të ekzekutohet
+
+### Kërkesat
+- Python 3.x
+### Ekzekutimi
+
+```bash
+python verzioni2.py
+```
 
 ---
 
