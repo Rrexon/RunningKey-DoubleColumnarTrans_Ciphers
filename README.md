@@ -2,7 +2,7 @@
 
 
 
-# 🔐 Running Key Cipher (VersionI i thjeshtuar - 1) - RunningKeyCipher.py
+# 🔐 Running Key Cipher (Versioni i thjeshtuar - 1) - RunningKeyCipher.py
 
 Ky projekt implementon një version më të thjeshtë të **Running Key Cipher**, ku key duhet të jetë të paktën po aq i gjatë sa mesazhi dhe nuk përdoret zgjatje automatike.
 
