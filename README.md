@@ -24,3 +24,13 @@ python columnar_transposition.py
 Pas ekzekutimit, programi pyet nëse dëshironi të **enkriptoni (1)** apo **dekriptoni (2)** mesazhin, pastaj kërkon inputet e nevojshme.
 
 ---
+
+## Përshkrimi i algoritmeve
+
+
+
+### 2. Double Columnar Transposition Cipher
+
+Columnar Transposition është një algoritëm që rirendit shkronjat e mesazhit bazuar në një çelës. Teksti vendoset në një matricë rresht pas rreshti, pastaj kolonat lexohen sipas rendit alfabetik të çelësit. **Double** Columnar Transposition e aplikon këtë proces dy herë radhazi me dy çelësa të ndryshëm, duke rritur ndjeshëm sigurinë.
+
+---
